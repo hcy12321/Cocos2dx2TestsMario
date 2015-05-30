@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Item">
+      <UniqueIdentifier>{5382e0c7-6036-4e67-a08e-8c3766251b90}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\LayerStart.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\LayerMenu.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\LayerGame.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ProgressBar.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\Item.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemFinalPoint.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemFlagPoint.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemFlower.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemFlyFish.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemMushroom.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemMushroomAddLife.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemMushroomReward.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemTortoise.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\Mario.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\MenuCtrl.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemTortoiseRound.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemTortoiseFly.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemBoss.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemBridgeStartPos.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemBullet.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemDarkCloud.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemFireString.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemLadderUD.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemAddMushroom.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemBattery.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemLadderLR.cpp">
+      <Filter>Classes\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="..\classes\ItemMove.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\LayerStart.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Common.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\LayerMenu.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ProgressBar.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\LayerGame.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\Item.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemFinalPoint.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemFlagPoint.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemFlower.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemFlyFish.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemMushroom.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemMushroomAddLife.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemMushroomReward.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemTortoise.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\Mario.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\MenuCtrl.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemTortoiseRound.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemBoss.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemBridgeStartPos.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemBullet.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemDarkCloud.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemFireString.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemTortoiseFly.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemAddMushroom.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemBattery.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemLadderUD.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemLadderLR.h">
+      <Filter>Classes\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="..\classes\ItemMove.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
