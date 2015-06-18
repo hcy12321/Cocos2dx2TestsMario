@@ -263,10 +263,25 @@ bool Mario::canMoveUp(float dt)
 	return true;
 }
 
-void Mario::Hit(const std::string& layermame, int gid, CCPoint ptTile)
+void Mario::Hit(const std::string& layername, int gid, CCPoint ptTile)
 {
-	if (layermame != "block") return;
-	CCTMXLayer * layer = getMap()->layerNamed(layermame.c_str());
+	if (layername != "block") return;
+
+	CCTMXLayer * layer = getMap()->layerNamed(layername.c_str());
+	if (gid == 1) // ÆÕÍ¨×©Í·
+	{
+
+	}
+	else if (gid == 601) // ÎÊºÅ
+	{
+		layer->setTileGID(31, ptTile);
+	}
+	else if (gid == 846) //
+	{
+		layer->setTileGID(31, ptTile);
+	}
+
+	if (gid == 31) return;
 	CCSprite * sprite = layer->tileAt(ptTile);
 	sprite->runAction(CCJumpBy::create(0.1f, ccp(0, 0), 8, 1));
 

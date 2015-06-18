@@ -1,11 +1,15 @@
 #ifndef __ITEMBULLET_H__
 #define __ITEMBULLET_H__
 
-class ItemBullet
+#include "ItemMove.h"
+class ItemBoss;
+class ItemBullet:public ItemMove
 {
 public:
-	ItemBullet();
-	~ItemBullet();
+	CREATE_FUNC(ItemBullet);
+	bool init();
+	void initBullet(ItemBoss * boss);
+	void collision();
 };
 
 

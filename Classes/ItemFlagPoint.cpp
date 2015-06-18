@@ -1,4 +1,5 @@
 #include "ItemFlagPoint.h"
+#include "ItemBoss.h"
 #include "Mario.h"
 
 ItemFlagPoint * ItemFlagPoint::create(CCDictionary* dict)
@@ -33,5 +34,22 @@ void ItemFlagPoint::collision()
 	{
 		_bCollisionWithMario = true;
 		_mario->autoRun2();
+
+		if (boundingBox().intersectsRect(_mario->boundingBox()))
+		{
+			// ฒ๐วล
+			if (m_bridge != NULL)
+			{
+				ItemBoss * boss = (ItemBoss *)m_boss;
+				boss->m_status = ItemBoss::DROPPING;
+
+				CCTMXLayer * land = getMap()->layerNamed("land");
+				CCPoint ptTile = Common::Point2Tile(getMap(), m_bridge->getPosition());
+				for (int i = 0; i < 13; ++i)
+				{
+					land->setTileGID(0, ccp(ptTile.x + i, ptTile.y));
+				}
+			}
+		}
 	}
 }

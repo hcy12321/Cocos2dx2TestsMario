@@ -23,6 +23,6 @@ void ItemFinalPoint::collision()
 {
 	if (_mario->getPositionX() > getPositionX())
 	{
-		CCDirector::sharedDirector()->replaceScene(Common::scene(LayerGame::create(LayerGame::_idx + 1)));
+		CCDirector::sharedDirector()->replaceScene(Common::scene(LayerGame::create((LayerGame::_idx + 1) % 8)));
 	}
 }

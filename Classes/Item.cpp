@@ -11,9 +11,15 @@
 #include "ItemFlyFish.h"
 #include "ItemTortoiseRound.h"
 #include "ItemTortoiseFly.h"
+#include "ItemLadderUD.h"
+#include "ItemFireString.h"
+#include "ItemBoss.h"
+#include "ItemBridgeStartPos.h"
 
 CCArray * Item::m_arrItemReward = NULL;
 Item * Item::_Flag;
+Item * Item::m_boss;
+Item * Item::m_bridge;
 
 Item::~Item()
 {
@@ -23,6 +29,7 @@ bool Item::init()
 	CCSprite::init();
 	setZOrder(100);
 	scheduleUpdate();
+	m_actionForStop = NULL;
 	return true;
 }
 Item * Item::create(CCDictionary * dict)
@@ -50,8 +57,16 @@ Item * Item::create(CCDictionary * dict)
 		return ItemFlyFish::create(dict);
 	else if (type->m_sString == "tortoise_round")
 		return ItemTortoiseRound::create(dict);
-	else if (type->m_sString == "totorise_fly")
+	else if (type->m_sString == "tortoise_fly")
 		return ItemTortoiseFly::create(dict);
+	else if (type->m_sString == "ladderUD")
+		return ItemLadderUD::create(dict);
+	else if (type->m_sString == "fire_string")
+		return ItemFireString::create(dict);
+	else if (type->m_sString == "boss")
+		return ItemBoss::create(dict);
+	else if (type->m_sString == "bridgestartpos")
+		return ItemBridgeStartPos::create(dict);
 	return NULL;
 }
 void Item::setPositionByProperty(CCDictionary * dict)
@@ -100,4 +115,15 @@ void Item::update(float dt)
 {
 	move(dt);
 	collision();
+}
+
+inline void Item::runAnimation(const char * name)
+{
+	//stopAllActions();
+	if (m_actionForStop != NULL)
+	{
+		stopAction(m_actionForStop);
+	}
+	// 保存执行动画，以便下次停止
+	runAction(m_actionForStop = Common::GetAnimateForeverActionByCacheName(name));
 }

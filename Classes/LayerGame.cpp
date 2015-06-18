@@ -45,14 +45,11 @@ void LayerGame::update(float delta)
 void LayerGame::onEnter()
 {
 	CCLayer::onEnter();
-	Item::m_arrItemReward = CCArray::create();
-	Item::m_arrItemReward->retain();
 }
 void LayerGame::onExit()
 {
 	CCLayer::onExit();
 //	_items->release();
-	Item::m_arrItemReward->release();
 }
 
 void LayerGame::loadResource()
@@ -232,6 +229,18 @@ void LayerGame::startGame()
 	// 加载地图
 	_map = CCTMXTiledMap::create(Common::format(_idx + 1, "MarioMap", ".tmx"));
 	addChild(_map);
+	// 在libcocos2d项目中ccConfig.h CC_LABELBMFONT_DEBUG_DRAW修改为1可防止黑线
+	// 防地图抖动
+	CCArray *pChildrenArray = _map->getChildren();
+	CCSpriteBatchNode *child = NULL;
+	CCObject *pObject = NULL;
+	CCARRAY_FOREACH(pChildrenArray, pObject){
+		child = (CCSpriteBatchNode *)pObject;
+		if (!child)
+			break;
+		child->getTexture()->setAntiAliasTexParameters();
+	}
+
 	Common::moveNode(_map, ccp(0, winSize.height - _map->getContentSize().height));
 	// 加载蘑菇怪资源
 	{
@@ -279,17 +288,42 @@ void LayerGame::startGame()
 		CCAnimationCache::sharedAnimationCache()->addAnimation(animation1, IT_FLY_FISH_LEFT);
 		CCAnimationCache::sharedAnimationCache()->addAnimation(animation2, IT_FLY_FISH_RIGHT);
 	}
+	// BOSS
+	{
+		CCAnimation * animation1 = Common::CreateAnimation("boss.png", 0, 3, 32, 0.05f);
+		CCAnimation * animation2 = Common::CreateAnimation("boss.png", 4, 7, 32, 0.05f);
+		CCAnimationCache::sharedAnimationCache()->addAnimation(animation1, IT_BOSS_WALK_LEFT);
+		CCAnimationCache::sharedAnimationCache()->addAnimation(animation2, IT_BOSS_WALK_RIGHT);
+	}
+	// BOSS Bullet动画
+	{
+		CCAnimation * animation1 = Common::CreateAnimation("bossBullet.png", 0, 1, 24, 0.05f);
+		CCAnimation * animation2 = Common::CreateAnimation("bossBullet.png", 2, 3, 24, 0.05f);
+		CCAnimationCache::sharedAnimationCache()->addAnimation(animation1, IT_BOSS_BULLET_LEFT);
+		CCAnimationCache::sharedAnimationCache()->addAnimation(animation2, IT_BOSS_BULLET_RIGHT);
+	}
 	// 增加控制按钮
 	addCtrl();
 
 	// 移动马里奥
 	schedule(schedule_selector(LayerGame::moveMario));
 
+	// 额，奖赏蘑菇初始化
+	if (Item::m_arrItemReward != NULL)
+	{
+		Item::m_arrItemReward->release();
+	}
+	Item::m_arrItemReward = CCArray::create();
+	Item::m_arrItemReward->retain();
+
 	// 加载地图对象元素
 	CCTMXObjectGroup * objGroup = _map->objectGroupNamed("objects");
 	CCArray * objs = objGroup->getObjects();
 	// 创建Mario
 	_mario = Mario::create();
+
+	Item::m_bridge = NULL;
+
 	CCObject * obj;
 	CCARRAY_FOREACH(objs, obj)
 	{
@@ -319,7 +353,33 @@ void LayerGame::startGame()
 	schedule(schedule_selector(LayerGame::checkMarioDie));
 	//  启动定时器来检测mario是否碰到旗杆
 	schedule(schedule_selector(LayerGame::checkMarioTouchPole));
+	// 吃金币定时器
+	schedule(schedule_selector(LayerGame::eatCoin));
 	if (Mario::_life == 0) Mario::_life = 3;
+}
+
+void LayerGame::eatCoin(float)
+{
+	CCRect rc = _mario->boundingBox();
+	if (rc.getMaxY() > _map->getContentSize().height || rc.getMinY() < 0) return;
+	CCTMXLayer * coinLayer = _map->layerNamed("coin");
+	CCPoint pt[4];
+	pt[0] = ccp(rc.getMinX(), rc.getMinY());
+	pt[1] = ccp(rc.getMinX(), rc.getMaxY());
+	pt[2] = ccp(rc.getMaxX(), rc.getMinY());
+	pt[3] = ccp(rc.getMaxX(), rc.getMaxY());
+
+	for (int i = 0; i < 4; ++i)
+	{
+		CCPoint ptTile = Common::Point2Tile(_map, pt[i]);
+		int gid = coinLayer->tileGIDAt(ptTile);
+		if (gid != 0)
+		{
+			// 播放吃金币的声音
+			CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("EatCoin.wma");
+			coinLayer->setTileGID(0, ptTile);
+		}
+	}
 }
 
 void LayerGame::checkMarioTouchPole(float)

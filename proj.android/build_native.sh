@@ -57,11 +57,11 @@ mkdir "$APP_ANDROID_ROOT"/assets
 for file in "$APP_ROOT"/Resources/*
 do
 if [ -d "$file" ]; then
-    cp -rf "$file" "$APP_ANDROID_ROOT"/assets
+    cp -rfp "$file" "$APP_ANDROID_ROOT"/assets
 fi
 
 if [ -f "$file" ]; then
-    cp "$file" "$APP_ANDROID_ROOT"/assets
+    cp -p "$file" "$APP_ANDROID_ROOT"/assets
 fi
 done
 

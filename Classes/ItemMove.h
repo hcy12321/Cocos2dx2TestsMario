@@ -16,9 +16,13 @@ public:
 	virtual void moveRight(float dt);
 	virtual void moveDown(float dt);
 
+	void setGodMode(int time);
+	void unsetGodMode(float dt);
+
 	int m_speedDown;
 	int m_speed;
 	int m_speedAcc;
+	bool m_bgodMode;
 };
 
 

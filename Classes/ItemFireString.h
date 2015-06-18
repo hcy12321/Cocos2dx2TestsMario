@@ -1,11 +1,16 @@
 #ifndef __ITEMFIRESTRING_H__
 #define __ITEMFIRESTRING_H__
 
-class ItemFireString
+#include "Item.h"
+
+class ItemFireString:public Item
 {
 public:
-	ItemFireString();
-	~ItemFireString();
+	static ItemFireString * create(CCDictionary* dict);
+	bool init(CCDictionary * dict);
+
+	void collision();
+
 };
 
 

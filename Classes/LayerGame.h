@@ -28,6 +28,7 @@ public:
 	void moveMario(float);
 	void checkMarioDie(float);
 	void checkMarioTouchPole(float);
+	void eatCoin(float);
 
 	void Jump(CCObject *);
 

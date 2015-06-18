@@ -1,12 +1,16 @@
 #ifndef __ITEMBRIDGESTARTPOS_H__
 #define __ITEMBRIDGESTARTPOS_H__
 
+#include "Item.h"
 
-class ItemBridgeStartPos
+class ItemBridgeStartPos:public Item
 {
 public:
-	ItemBridgeStartPos();
-	~ItemBridgeStartPos();
+	static ItemBridgeStartPos * create(CCDictionary* dict);
+	bool init(CCDictionary * dict);
+
+	void collision();
+
 };
 
 

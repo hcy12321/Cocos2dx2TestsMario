@@ -7,8 +7,34 @@ LOCAL_MODULE := cocos2dcpp_shared
 LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
-                   ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+							../../Classes/AppDelegate.cpp \
+							../../Classes/Item.cpp \
+							../../Classes/ItemAddMushroom.cpp \
+							../../Classes/ItemBattery.cpp \
+							../../Classes/ItemBoss.cpp \
+							../../Classes/ItemBridgeStartPos.cpp \
+							../../Classes/ItemBullet.cpp \
+							../../Classes/ItemDarkCloud.cpp \
+							../../Classes/ItemFinalPoint.cpp \
+							../../Classes/ItemFireString.cpp \
+							../../Classes/ItemFlagPoint.cpp \
+							../../Classes/ItemFlower.cpp \
+							../../Classes/ItemFlyFish.cpp \
+							../../Classes/ItemLadderLR.cpp \
+							../../Classes/ItemLadderUD.cpp \
+							../../Classes/ItemMove.cpp \
+							../../Classes/ItemMushroom.cpp \
+							../../Classes/ItemMushroomAddLife.cpp \
+							../../Classes/ItemMushroomReward.cpp \
+							../../Classes/ItemTortoise.cpp \
+							../../Classes/ItemTortoiseFly.cpp \
+							../../Classes/ItemTortoiseRound.cpp \
+							../../Classes/LayerGame.cpp \
+							../../Classes/LayerMenu.cpp \
+							../../Classes/LayerStart.cpp \
+							../../Classes/Mario.cpp \
+							../../Classes/MenuCtrl.cpp \
+							../../Classes/ProgressBar.cpp 
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

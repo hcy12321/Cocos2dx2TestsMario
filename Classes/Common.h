@@ -27,6 +27,10 @@ using namespace CocosDenshion;
 #define IT_MUSHROOM_ADD_LIFE "MushroomAddLife"
 #define IT_FLY_FISH_LEFT "FlyFishLeft"
 #define IT_FLY_FISH_RIGHT "FlyFishRight"
+#define IT_BOSS_WALK_LEFT "BossWalkLeft"
+#define IT_BOSS_WALK_RIGHT "BossWalkRight"
+#define IT_BOSS_BULLET_LEFT "BossBulletLeft"
+#define IT_BOSS_BULLET_RIGHT "BossBulletRight"
 
 struct Common
 {

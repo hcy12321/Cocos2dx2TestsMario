@@ -6,6 +6,7 @@ bool ItemMove::init()
 
 	m_speed = 50;
 	m_speedDown = m_speedAcc = 10;
+	m_bgodMode = false;
 
 	return true;
 }
@@ -148,4 +149,14 @@ void ItemMove::moveDown(float dt)
 	{
 		m_speedDown = m_speedAcc;
 	}
+}
+
+void ItemMove::setGodMode(int time)
+{
+	m_bgodMode = true;
+	scheduleOnce(schedule_selector(ItemMove::unsetGodMode), time);
+}
+void ItemMove::unsetGodMode(float dt)
+{
+	m_bgodMode = false;
 }

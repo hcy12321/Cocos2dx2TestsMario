@@ -1,10 +1,8 @@
-﻿生成启动时间为 2015/5/30 13:36:27。
+﻿生成启动时间为 2015/6/7 23:49:14。
      1>项目“E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\MarioYao.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\win32" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\external" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\CocosDenshion\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\extensions" /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\classes\ItemTortoise.cpp ..\classes\ItemTortoiseRound.cpp
-         ItemTortoiseRound.cpp
-         ItemTortoise.cpp
-         正在生成代码...
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\win32" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\external" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\CocosDenshion\include" /I"E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\extensions" /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\classes\LayerGame.cpp
+         LayerGame.cpp
        PreLinkEvent:
          if not exist "E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\Debug.win32\" mkdir "E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\Debug.win32\"
          xcopy /Y /Q "E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\..\..\..\external\libwebsockets\win32\lib\*.*" "E:\projects\Cocos\cocos2d-x-2.2.3\projects\MarioYao\proj.win32\Debug.win32\"
@@ -50,4 +48,4 @@
 
 生成成功。
 
-已用时间 00:00:05.49
+已用时间 00:00:01.89

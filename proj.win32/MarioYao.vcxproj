@@ -144,6 +144,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\classes\ItemFlagPoint.cpp" />
     <ClCompile Include="..\classes\ItemFlower.cpp" />
     <ClCompile Include="..\classes\ItemFlyFish.cpp" />
+    <ClCompile Include="..\Classes\ItemLadderLR.cpp" />
     <ClCompile Include="..\classes\ItemLadderUD.cpp" />
     <ClCompile Include="..\classes\ItemMove.cpp" />
     <ClCompile Include="..\classes\ItemMushroom.cpp" />
@@ -158,7 +159,6 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\classes\Mario.cpp" />
     <ClCompile Include="..\classes\MenuCtrl.cpp" />
     <ClCompile Include="..\classes\ProgressBar.cpp" />
-    <ClCompile Include="ItemLadderLR.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
